@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="GAMEJAM"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/name="GameJamGame"
+config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [display]
 
@@ -20,7 +20,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="GAMEJAM"
+project/assembly_name="GameJamGame"
 
 [editor]
 
@@ -34,3 +34,5 @@ version_control/autoload_on_startup=true
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
