@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://dlhagthk0l5nf"]
 
+[ext_resource type="Texture2D" uid="uid://dmkqvp76h61ab" path="res://assets/др кот со слюной.png" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://w2g3yla82gxg" path="res://assets/если не думать то.jpg" id="2_lnu2h"]
+
 [node name="GAME" type="Node2D" unique_id=159142166]
+
+[node name="ДрКотСоСлюной" type="Sprite2D" parent="." unique_id=1982871397]
+position = Vector2(303, 116)
+texture = ExtResource("1_yqjtg")
+
+[node name="ЕслиНеДуматьТо" type="Sprite2D" parent="." unique_id=111630200]
+position = Vector2(1003, 52)
+texture = ExtResource("2_lnu2h")
