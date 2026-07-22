@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://dlhagthk0l5nf"]
 
-[ext_resource type="Script" uid="uid://dgoc0g13vfr6a" path="res://scripts/square.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://7unyxt3eqb8d" path="res://scenes/Player.tscn" id="2_yqjtg"]
 
 [node name="GAME" type="Node2D" unique_id=159142166]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=2034439511]
-script = ExtResource("1_uwrxv")
-size = Vector2(200, 200)
+[node name="Player" parent="." unique_id=621549556 instance=ExtResource("2_yqjtg")]
+position = Vector2(783, 275)
