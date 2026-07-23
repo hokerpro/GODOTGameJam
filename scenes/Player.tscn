@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r2vjg"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lhu0v"]
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_0csk2"]
 
 [node name="Player" type="Node2D" unique_id=621549556]
 
@@ -21,6 +21,16 @@ shape = SubResource("CapsuleShape2D_r2vjg")
 
 [node name="AnimationTree" type="AnimationTree" parent="CharacterBody2D" unique_id=123463190]
 root_node = NodePath("../..")
-tree_root = SubResource("AnimationNodeAnimation_lhu0v")
+tree_root = SubResource("AnimationNodeBlendSpace2D_0csk2")
+parameters/blend_position = Vector2(0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D" unique_id=295204518]
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1050754951]
+zoom = Vector2(1.5, 1.5)
+limit_top = -100
+limit_bottom = 100
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

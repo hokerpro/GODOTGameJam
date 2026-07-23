@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://k8kmlvmdyib8"]
+
+[ext_resource type="Script" uid="uid://cnyb40agw8hds" path="res://scripts/interaction_manager.gd" id="1_mhefn"]
+
+[sub_resource type="Gradient" id="Gradient_6xvi5"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r2vjg"]
+gradient = SubResource("Gradient_6xvi5")
+fill_from = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2vjg"]
+size = Vector2(279, 277.5)
+
+[node name="Npc" type="Node2D" unique_id=137344267]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1254933239]
+texture = SubResource("GradientTexture2D_r2vjg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1335333753]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=87213274]
+shape = SubResource("RectangleShape2D_r2vjg")
+
+[node name="InteractionManager" type="Node2D" parent="." unique_id=94074704]
+script = ExtResource("1_mhefn")

@@ -1,0 +1,11 @@
+~ start
+Player : Yoo
+NPC: Yoo
+- What's up
+	NPC : Yeah, it's nice to see you!
+- Go fck yourself
+	NPC: You're so nice!!!
+- Start again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END
