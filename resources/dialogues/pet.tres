@@ -1,0 +1,8 @@
+[gd_resource type="Resource" format=3 uid="uid://d2pbe4tkli146"]
+
+[ext_resource type="Resource" uid="uid://bld51rvqxh4wx" path="res://dialogues/pet.dialogue" id="1_m8oay"]
+[ext_resource type="Script" uid="uid://bjitxfynw451h" path="res://resources/dialogues/dialogueResourceSample.gd" id="2_8763i"]
+
+[resource]
+script = ExtResource("2_8763i")
+dialogue = ExtResource("1_m8oay")

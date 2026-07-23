@@ -1,0 +1,6 @@
+~ start
+Player : Ohh he is soo [wave amp=25 freq=5] cuttie[/wave]!!!
+Cutie: idk what to say
+Player: OOHHHH I want to pet it [shake rate=20 level=10]SOOO MUCH[/shake]!!
+Cutie: dies [$> changeAnimation("pet_dead")]
+=> END!

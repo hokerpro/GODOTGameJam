@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bld51rvqxh4wx"
+path="res://.godot/imported/pet.dialogue-b57f69c82e338997694cbdc9558eb9e6.tres"
+
+[deps]
+
+source_file="res://dialogues/pet.dialogue"
+dest_files=["res://.godot/imported/pet.dialogue-b57f69c82e338997694cbdc9558eb9e6.tres"]
+
+[params]
+
+defaults=true

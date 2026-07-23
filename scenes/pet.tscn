@@ -1,7 +1,37 @@
 [gd_scene format=3 uid="uid://dfdlgkgtng3d7"]
 
-[ext_resource type="Script" uid="uid://hrdpwvn8iv8q" path="res://scripts/pet.gd" id="1_8wqpi"]
+[ext_resource type="Script" uid="uid://hrdpwvn8iv8q" path="res://scripts/npc.gd" id="1_8wqpi"]
 [ext_resource type="Texture2D" uid="uid://bpi2dsdoy7to8" path="res://assets/Pet/sea_bunny_idle.png" id="1_mdqe4"]
+[ext_resource type="Resource" uid="uid://d2pbe4tkli146" path="res://resources/dialogues/pet.tres" id="2_hmkkh"]
+[ext_resource type="Texture2D" uid="uid://bh7haumr2jlcm" path="res://assets/Pet/sea_bunny_is_dead.png" id="3_hmkkh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c8qe"]
+atlas = ExtResource("3_hmkkh")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hio3l"]
+atlas = ExtResource("3_hmkkh")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekye6"]
+atlas = ExtResource("3_hmkkh")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn77u"]
+atlas = ExtResource("3_hmkkh")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx5n6"]
+atlas = ExtResource("3_hmkkh")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqxis"]
+atlas = ExtResource("3_hmkkh")
+region = Rect2(1000, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3mvd"]
+atlas = ExtResource("3_hmkkh")
+region = Rect2(1200, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wqpi"]
 atlas = ExtResource("1_mdqe4")
@@ -27,6 +57,32 @@ region = Rect2(800, 0, 200, 200)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5c8qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hio3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekye6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn77u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx5n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqxis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3mvd")
+}],
+"loop": 0,
+"name": &"pet_dead",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8wqpi")
 }, {
 "duration": 1.0,
@@ -41,7 +97,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_axfbl")
 }],
-"loop": 2,
+"loop": 1,
 "name": &"pet_idle",
 "speed": 8.0
 }]
@@ -50,6 +106,7 @@ animations = [{
 
 [node name="Pet" type="Node2D" unique_id=939542846]
 script = ExtResource("1_8wqpi")
+interactData = ExtResource("2_hmkkh")
 areaSize = Vector2(100, 100)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=4525288]
@@ -57,9 +114,9 @@ position = Vector2(-11, -81)
 sprite_frames = SubResource("SpriteFrames_1ekc0")
 animation = &"pet_idle"
 autoplay = "pet_idle"
-frame_progress = 0.66068476
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1099935433]
+light_mask = 2
 position = Vector2(-1, -29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1677602721]

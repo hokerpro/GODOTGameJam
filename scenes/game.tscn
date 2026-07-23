@@ -4,13 +4,35 @@
 [ext_resource type="Resource" uid="uid://ux4ghu4gl5jb" path="res://dialogues/test.dialogue" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://7unyxt3eqb8d" path="res://scenes/Player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dfdlgkgtng3d7" path="res://scenes/pet.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://k8kmlvmdyib8" path="res://scenes/NPC.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://etivi8v0ilrm" path="res://ui/quests/quest.tscn" id="6_p57ef"]
 
 [node name="GAME" type="Node2D" unique_id=159142166]
 script = ExtResource("1_lnu2h")
 dialogueResource = ExtResource("2_lbhrr")
 
 [node name="Player" parent="." unique_id=621549556 instance=ExtResource("2_yqjtg")]
-position = Vector2(861, 9)
+position = Vector2(724, -29)
 
 [node name="Pet" parent="." unique_id=939542846 instance=ExtResource("4_lbhrr")]
-position = Vector2(659, -60)
+position = Vector2(473, 72)
+
+[node name="Npc" parent="." unique_id=137344267 instance=ExtResource("5_iywne")]
+position = Vector2(1009, 6)
+areaSize = Vector2(100, 100)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=593019696]
+
+[node name="Control2" type="Control" parent="CanvasLayer" unique_id=247761435]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" parent="CanvasLayer/Control2" unique_id=1765060132 instance=ExtResource("6_p57ef")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+offset_left = 0.0

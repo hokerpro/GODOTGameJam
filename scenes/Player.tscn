@@ -1,30 +1,19 @@
 [gd_scene format=3 uid="uid://7unyxt3eqb8d"]
 
-[ext_resource type="Texture2D" uid="uid://dmkqvp76h61ab" path="res://assets/др кот со слюной.png" id="1_p0vlq"]
-[ext_resource type="Script" uid="uid://dl4hym3cei1b8" path="res://scripts/playerMovement.gd" id="1_v6fml"]
+[ext_resource type="Script" uid="uid://0n03jiv4dfda" path="res://scripts/player.gd" id="1_3li8b"]
+[ext_resource type="SpriteFrames" uid="uid://dy0etga1mj47v" path="res://animations/player_idle.tres" id="2_qu4a1"]
+[ext_resource type="Script" uid="uid://cm87213dlikf5" path="res://scripts/state_machine.gd" id="4_mdl7e"]
+[ext_resource type="Script" uid="uid://dgg2cqgxi5cdl" path="res://states/player/playerIdle.gd" id="5_qu4a1"]
+[ext_resource type="Script" uid="uid://csr3lqrks0nwa" path="res://states/player/playerInteract.gd" id="6_70d11"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r2vjg"]
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_0csk2"]
+radius = 23.0
+height = 114.0
 
 [node name="Player" type="Node2D" unique_id=621549556]
+script = ExtResource("1_3li8b")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1048969719]
-script = ExtResource("1_v6fml")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=533319017]
-scale = Vector2(0.25700936, 0.25700936)
-texture = ExtResource("1_p0vlq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=775065374]
-shape = SubResource("CapsuleShape2D_r2vjg")
-
-[node name="AnimationTree" type="AnimationTree" parent="CharacterBody2D" unique_id=123463190]
-root_node = NodePath("../..")
-tree_root = SubResource("AnimationNodeBlendSpace2D_0csk2")
-parameters/blend_position = Vector2(0, 0)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D" unique_id=295204518]
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1050754951]
 zoom = Vector2(1.5, 1.5)
@@ -34,3 +23,31 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+drag_left_margin = 0.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=658133791]
+position = Vector2(-1, -91)
+sprite_frames = ExtResource("2_qu4a1")
+animation = &"player_idle"
+autoplay = "player_idle"
+frame_progress = 0.69667184
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=775065374]
+visible = false
+visibility_layer = 2
+position = Vector2(-4, -54)
+shape = SubResource("CapsuleShape2D_r2vjg")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1871768259 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("4_mdl7e")
+initial_state = NodePath("playerIdle")
+
+[node name="playerIdle" type="Node" parent="StateMachine" unique_id=298108117 node_paths=PackedStringArray("player")]
+script = ExtResource("5_qu4a1")
+player = NodePath("../..")
+metadata/_custom_type_script = "uid://dgg2cqgxi5cdl"
+
+[node name="playerInteract" type="Node" parent="StateMachine" unique_id=695297668 node_paths=PackedStringArray("player")]
+script = ExtResource("6_70d11")
+player = NodePath("../..")
+metadata/_custom_type_script = "uid://csr3lqrks0nwa"

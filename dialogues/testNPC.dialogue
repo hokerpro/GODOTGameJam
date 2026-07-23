@@ -1,0 +1,9 @@
+~ start
+Player : Hi dear
+TestNPC: Hi
+Player: ah
+TestNPC: what? something wrong?
+Player: no, not really
+TestNPC: that's good
+Player: yap
+=> END!

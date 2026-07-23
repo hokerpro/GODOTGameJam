@@ -5,7 +5,7 @@ var characterName : String = "HOKER"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	DialogueManager.show_dialogue_balloon(dialogueResource)
+	y_sort_enabled = true
 	get_tree().debug_collisions_hint = true
 
 
