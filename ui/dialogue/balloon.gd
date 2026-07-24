@@ -146,15 +146,18 @@ func apply_dialogue_line() -> void:
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
 		dialogue_label.type_out()
+		if dialogue_line.has_tag("voice"):
+			audio_stream_player.stream = load(dialogue_line.get_tag_value("voice"))
+			(audio_stream_player.stream as AudioStreamMP3).loop = true
+			audio_stream_player.pitch_scale = randf_range(0.9, 1.1)
+			audio_stream_player.volume_db= randf_range(-2, 2)
+			audio_stream_player.play()
 		await dialogue_label.finished_typing
+		if dialogue_line.has_tag("voice"):
+			audio_stream_player.stop()
 
 	# Wait for next line
-	if dialogue_line.has_tag("voice"):
-		audio_stream_player.stream = load(dialogue_line.get_tag_value("voice"))
-		audio_stream_player.play()
-		await audio_stream_player.finished
-		next(dialogue_line.next_id)
-	elif dialogue_line.responses.size() > 0:
+	if dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE
 		responses_menu.show()
 	elif dialogue_line.time != "":

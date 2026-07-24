@@ -1,9 +1,10 @@
-[gd_resource type="Resource" format=3 uid="uid://cwtm6dvf6fxjr"]
+[gd_resource type="Resource" script_class="QuestInfo" format=3 uid="uid://cwtm6dvf6fxjr"]
 
-[ext_resource type="Script" uid="uid://dn4iw3offmetu" path="res://resources/quests/quest1.gd" id="1_6idks"]
+[ext_resource type="Script" uid="uid://djk4iyik8tgea" path="res://resources/quests/questResourceSample.gd" id="1_6idks"]
 
 [resource]
 script = ExtResource("1_6idks")
-Text = "Meet your love"
+text = "Meet your love"
 description = "Go and meet your love in the left part of the city!"
 requirement = 100
+targetX = -3750

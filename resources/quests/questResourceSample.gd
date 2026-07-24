@@ -1,15 +1,10 @@
-@export var Text : String
+extends Resource
+class_name QuestInfo
+
+enum QUESTTYPE {Distance}
+
+@export var text : String
 @export var description : String
 @export_range(0, 100, 1) var requirement : int
-var result = 0
-
-func Enter() -> void:
-	pass
-
-func Update() -> void:
-	if result >= requirement:
-		Exit()
-	pass
-
-func Exit() -> void:
-	pass
+@export var type : QUESTTYPE
+@export var targetX := -500
