@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://q7860pe25kk4"]
+
+[ext_resource type="Script" uid="uid://d2dapl05rqtxq" path="res://scripts/gamemanager.gd" id="1_jk8j4"]
+
+[node name="Court" type="Node2D" unique_id=1826877627]
+script = ExtResource("1_jk8j4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1782494595]

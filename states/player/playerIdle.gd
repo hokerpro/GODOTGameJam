@@ -3,7 +3,7 @@ class_name playerIdle
 
 const SPEED = 300.0
 
-@export var player : Node2D
+@export var player : Player
 @onready var character : CharacterBody2D = player.get_node("CharacterBody2D")
 @onready var animationSprite : AnimatedSprite2D = character.get_node("AnimatedSprite2D")
 
@@ -18,12 +18,12 @@ func Enter() -> void:
 func updateAnimation() -> void:
 	if abs(character.velocity.length()) > 0.5:
 		if character.velocity.x > 0.25:
-			animationSprite.flip_h = false
+			player.flipSprite(false)
 		elif character.velocity.x < 0.25:
-			animationSprite.flip_h = true
-		animationSprite.animation = "player_move"
+			player.flipSprite(true)
+		player.changePlayerAnimation("player_move")
 	else:
-		animationSprite.animation = "player_idle"
+		player.changePlayerAnimation("player_idle")
 
 func Update(delta: float) -> void:
 	updateAnimation()

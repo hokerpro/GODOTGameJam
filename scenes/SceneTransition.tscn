@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d10l0df77ly7b"]
+
+[ext_resource type="Script" uid="uid://chgprqvay76e3" path="res://scripts/transition.gd" id="1_e0bkc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2vjg"]
+bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
+
+[node name="Transition" type="Control" unique_id=948262559]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e0bkc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=713080176]
+layer = 10
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=432546714]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r2vjg")

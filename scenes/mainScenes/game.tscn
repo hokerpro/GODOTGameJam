@@ -1,0 +1,87 @@
+[gd_scene format=4 uid="uid://dlhagthk0l5nf"]
+
+[ext_resource type="Script" uid="uid://d2dapl05rqtxq" path="res://scripts/gamemanager.gd" id="1_js5aq"]
+[ext_resource type="Texture2D" uid="uid://dhqjlowf4u2cn" path="res://assets/city/test.png" id="2_cbr0i"]
+[ext_resource type="PackedScene" uid="uid://7unyxt3eqb8d" path="res://scenes/Player.tscn" id="3_58e7u"]
+[ext_resource type="PackedScene" uid="uid://dfdlgkgtng3d7" path="res://scenes/pet.tscn" id="4_p36de"]
+[ext_resource type="PackedScene" uid="uid://k8kmlvmdyib8" path="res://scenes/NPC.tscn" id="5_ajxqs"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
+normal = Vector2(-1, 0)
+distance = -120.19
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u5sy4"]
+normal = Vector2(0, 1)
+distance = -383.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gee14"]
+distance = -383.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_daaot"]
+normal = Vector2(1, 0)
+distance = -1024.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
+texture = ExtResource("2_cbr0i")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_daaot"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_u5sy4")
+
+[node name="GAME" type="Node2D" unique_id=159142166]
+process_mode = 3
+script = ExtResource("1_js5aq")
+
+[node name="Right" type="StaticBody2D" parent="." unique_id=1435634084]
+visible = false
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Right" unique_id=784772608]
+position = Vector2(1200, 0)
+shape = SubResource("WorldBoundaryShape2D_p57ef")
+
+[node name="Top" type="StaticBody2D" parent="." unique_id=1132523672]
+visible = false
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Top" unique_id=1776079571]
+position = Vector2(1200, 0)
+shape = SubResource("WorldBoundaryShape2D_u5sy4")
+
+[node name="Bottom" type="StaticBody2D" parent="." unique_id=222093306]
+visible = false
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Bottom" unique_id=1187876037]
+position = Vector2(1200, 0)
+shape = SubResource("WorldBoundaryShape2D_gee14")
+
+[node name="Left" type="StaticBody2D" parent="." unique_id=1574081156]
+visible = false
+
+[node name="CollisionShape2d2" type="CollisionShape2D" parent="Left" unique_id=1202848149]
+shape = SubResource("WorldBoundaryShape2D_daaot")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1204955590]
+z_index = -100
+tile_map_data = PackedByteArray("AAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAAEAP3/AAAAAAAAAAAFAP3/AAAAAAAAAAAGAP3/AAAAAAAAAAAHAP3/AAAAAAAAAAAIAP3/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAALAP7/AAAAAAAAAAAKAP3/AAAAAAAAAAALAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAADAP7/AAAAAAAAAAACAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAAAAAEAAAACAAAAAAABAAEAAAACAAAAAAACAAEAAAACAAAAAAADAAEAAAACAAAAAAAEAAEAAAACAAAAAAAFAAEAAAACAAAAAAAGAAEAAAACAAAAAAAHAAEAAAACAAAAAAAIAAEAAAACAAAAAAAJAAEAAAACAAAAAAAKAAEAAAACAAAAAAALAAEAAAACAAAAAAAAAAAAAAADAAAAAAABAAAAAAADAAAAAAACAAAAAAADAAAAAAADAAAAAAADAAAAAAAEAAAAAAADAAAAAAAFAAAAAAADAAAAAAAGAAAAAAADAAAAAAAHAAAAAAADAAAAAAAIAAAAAAADAAAAAAAJAAAAAAADAAAAAAAKAAAAAAADAAAAAAALAAAAAAADAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAALAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_daaot")
+
+[node name="Player" parent="." unique_id=621549556 instance=ExtResource("3_58e7u")]
+unique_name_in_owner = true
+process_mode = 1
+position = Vector2(1059, 7)
+
+[node name="Pet" parent="." unique_id=939542846 instance=ExtResource("4_p36de")]
+process_mode = 1
+position = Vector2(1261, -19)
+
+[node name="Npc" parent="." unique_id=137344267 instance=ExtResource("5_ajxqs")]
+process_mode = 1
+position = Vector2(-73, -43)
+areaSize = Vector2(100, 100)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=593019696]
+process_mode = 1

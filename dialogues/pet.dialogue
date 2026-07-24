@@ -1,6 +1,6 @@
 ~ start
 Player : Ohh he is soo [wave amp=25 freq=5] cuttie[/wave]!!! [#voice=uid://co4sj5uoa42x]
-Cutie: idk what to say [#voice=uid://co4sj5uoa42x]
-Player: OOHHHH I want to pet it [shake rate=20 level=10]SOOO MUCH[/shake]!! [#voice=uid://co4sj5uoa42x]
-Cutie: dies [$> changeAnimation("pet_dead")] [#voice=uid://co4sj5uoa42x]
+Cutie: idk what to say [$> walkTo(getMarkerPosition(), 1)] [$> flipSprite(false)]
+Player: OOHHHH I want to pet it [shake rate=20 level=10]SOOO MUCH[/shake]!! [#voice=uid://co4sj5uoa42x] [$> changePlayerAnimation("player_sit", "player_pet")]
+Cutie: [wait=2] dies [$> changeAnimation("pet_dead")] [$> changePlayerAnimation("player_ahui")] [wait=2] [$> TransitionSystem.changeScene("res://scenes/mainScenes/Court.tscn")]
 => END!

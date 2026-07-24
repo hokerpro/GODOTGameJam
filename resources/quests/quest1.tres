@@ -7,4 +7,4 @@ script = ExtResource("1_6idks")
 text = "Meet your love"
 description = "Go and meet your love in the left part of the city!"
 requirement = 100
-targetX = -3750
+targetX = 4750

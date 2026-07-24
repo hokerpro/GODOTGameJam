@@ -30,7 +30,7 @@ position = Vector2(-1, -91)
 sprite_frames = ExtResource("2_qu4a1")
 animation = &"player_idle"
 autoplay = "player_idle"
-frame_progress = 0.69667184
+frame_progress = 0.5177632
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=775065374]
 visible = false

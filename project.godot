@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GameJamGame"
-run/main_scene="uid://dlhagthk0l5nf"
+run/main_scene="uid://dkqhas0o27jh4"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [audio]
@@ -20,8 +20,11 @@ general/default_playback_type.web=0
 
 [autoload]
 
-DialogueManager="*uid://c3rodes2l3gxb"
 QuestSystem="*uid://b1xlraqi87yot"
+TransitionSystem="*uid://baqmj1wnmaptc"
+SceneTransition="*uid://d10l0df77ly7b"
+UiQuestTable="*uid://etivi8v0ilrm"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [dialogue_manager]
 

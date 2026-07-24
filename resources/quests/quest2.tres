@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestInfo" format=3 uid="uid://cpnuw7xy130y4"]
+
+[ext_resource type="Script" uid="uid://djk4iyik8tgea" path="res://resources/quests/questResourceSample.gd" id="1_kgbeq"]
+
+[resource]
+script = ExtResource("1_kgbeq")
+text = "Go fuck yourself"
+description = "Please speed I need this"
+requirement = 100
+targetX = 5500

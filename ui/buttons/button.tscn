@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://clto42qmtsch5"]
+
+[ext_resource type="Script" uid="uid://baq8ijstwnqbg" path="res://ui/buttons/button.gd" id="1_deflu"]
+
+[node name="Button" type="Control" unique_id=272128026]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_deflu")
+
+[node name="Button" type="Button" parent="." unique_id=934080902]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.601
+anchor_bottom = 0.813
+offset_right = -19.920044
+offset_bottom = -27.26001

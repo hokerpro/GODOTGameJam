@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://etivi8v0ilrm"]
 
-[ext_resource type="Script" uid="uid://bwific6mt65fr" path="res://ui/quests/quest_table.gd" id="1_noqlo"]
-[ext_resource type="FontFile" uid="uid://jytxumb6p0ke" path="res://font/GermaniaOne-Regular.ttf" id="1_u3yse"]
+[ext_resource type="FontFile" uid="uid://jytxumb6p0ke" path="res://font/GermaniaOne-Regular.ttf" id="1_pqaww"]
+[ext_resource type="Script" uid="uid://bwific6mt65fr" path="res://ui/quests/quest_table.gd" id="1_whb1b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2vjg"]
 bg_color = Color(0.4462527, 0.2467143, 0.036952384, 1)
@@ -16,27 +16,18 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_r2vjg"]
-font = ExtResource("1_u3yse")
+font = ExtResource("1_pqaww")
 font_size = 70
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_r2vjg"]
 color = Color(0.843856, 0.48343235, 0.24970081, 1)
 
-[node name="questTable" type="Control" unique_id=1765060132]
-layout_mode = 3
-anchor_left = 0.5
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -960.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_noqlo")
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1741684830]
+script = ExtResource("1_whb1b")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1867872803]
-layout_mode = 1
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=529753276]
 anchors_preset = -1
-anchor_left = 0.711
-anchor_right = 1.0
+anchor_right = 0.40358335
 anchor_bottom = 1.0
 offset_right = -264.88
 offset_bottom = -696.0
@@ -44,28 +35,27 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
-metadata/_edit_use_anchors_ = true
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=759167124]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=431310398]
 custom_minimum_size = Vector2(450, 200)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_r2vjg")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=1614220603]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=1019521506]
 layout_mode = 2
 theme_override_constants/margin_top = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=1669351199]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=1178924460]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1195018870]
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=938175975]
 layout_mode = 2
 text = "QUESTS"
 label_settings = SubResource("LabelSettings_r2vjg")
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1579505344]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1436203909]
 layout_mode = 2
 theme_override_constants/separation = 6
 theme_override_styles/separator = SubResource("StyleBoxLine_r2vjg")
