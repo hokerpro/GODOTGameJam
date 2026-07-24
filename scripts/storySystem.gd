@@ -3,7 +3,7 @@ extends Node
 const COURT = preload("uid://b4wh34ntntmah")
 
 var nextStep := 0
-var steps : Array[Callable] = [step0, step1]
+var steps : Array[Callable] = [step0, step1, step2]
 const QUEST_1 = preload("uid://cwtm6dvf6fxjr")
 const QUEST_2 = preload("uid://cpnuw7xy130y4")
 

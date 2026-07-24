@@ -145,12 +145,16 @@ func apply_dialogue_line() -> void:
 	will_hide_balloon = false
 	
 	if dialogue_line.has_tag("image"):
+		animatedSprite.flip_h = false
 		var imageName = dialogue_line.get_tag_value("image")
 		animatedSprite.play(imageName)
 		animatedSprite.visible = true
 	else:
 		animatedSprite.stop()
 		animatedSprite.visible = false
+	if dialogue_line.has_tag("flip"):
+		animatedSprite.flip_h = true
+	
 	
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():

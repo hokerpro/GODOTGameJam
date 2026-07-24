@@ -1,7 +1,8 @@
 ~ start
-Judge: Bla bla bla
-Lawyer: HE KILLED IT!! HE KILLED MY BOY!
-Judge: Oh, that sucks
-Player: but, but... I didn't d...
-Judge: SHUT UP, I DONT WANT TO HEAR YOU YAPPING, GUILTY!! I SENTENCE YOU TO BE EXECUTED ASAP!!!
+Judge: Bla bla bla [#image=Judge]
+Lawyer: HE KILLED IT!! HE KILLED MY BOY! [#image=Lawyer]
+Judge: Oh, that sucks [#image=Judge]
+Player: but, but... I didn't d... [#image=Player, #flip]
+Judge: SHUT UP, I DONT WANT TO HEAR YOU YAPPING, GUILTY!! I SENTENCE YOU TO BE EXECUTED ASAP!!! [#image=Judge] 
+$> StorySystem.startNextStep()
 => END
