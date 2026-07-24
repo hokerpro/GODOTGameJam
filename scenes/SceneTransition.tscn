@@ -7,6 +7,7 @@ bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
 
 [node name="Transition" type="Control" unique_id=948262559]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -24,4 +25,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r2vjg")

@@ -1,6 +1,28 @@
 [gd_scene format=3 uid="uid://clto42qmtsch5"]
 
 [ext_resource type="Script" uid="uid://baq8ijstwnqbg" path="res://ui/buttons/button.gd" id="1_deflu"]
+[ext_resource type="FontFile" uid="uid://jytxumb6p0ke" path="res://font/GermaniaOne-Regular.ttf" id="2_sfsj8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2vjg"]
+bg_color = Color(0.25882354, 0.32156864, 0.1882353, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5567506, 0.64725196, 0.4402104, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ekc0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lrfn"]
+bg_color = Color(0.56078434, 0.7372549, 0.45490196, 0.41568628)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="Button" type="Control" unique_id=272128026]
 layout_mode = 3
@@ -11,11 +33,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_deflu")
 
-[node name="Button" type="Button" parent="." unique_id=934080902]
-process_mode = 3
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1561210508]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.601
-anchor_bottom = 0.813
-offset_right = -19.920044
-offset_bottom = -27.26001
+anchor_top = 0.507
+anchor_right = 0.23300001
+anchor_bottom = 0.67700005
+offset_top = -0.14001465
+offset_right = 0.63998413
+offset_bottom = 0.45996094
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1724955582]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r2vjg")
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer" unique_id=869594808]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sfsj8")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ekc0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4lrfn")
+text = "PLAY"
+
+[connection signal="button_down" from="MarginContainer/PanelContainer/Button" to="." method="_on_button_button_down"]

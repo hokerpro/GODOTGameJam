@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b4wh34ntntmah"
+path="res://.godot/imported/Court.dialogue-96132761f7c609b3fb481169d6ddeea6.tres"
+
+[deps]
+
+source_file="res://dialogues/Court.dialogue"
+dest_files=["res://.godot/imported/Court.dialogue-96132761f7c609b3fb481169d6ddeea6.tres"]
+
+[params]
+
+defaults=true

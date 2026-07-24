@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://jmwtganavr5d" path="res://ui/dialogue/balloon.gd" id="1_tpkri"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_lbkgx"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_r5ag5"]
+[ext_resource type="Texture2D" uid="uid://b2frntpmfl38i" path="res://assets/visualNovel/visual_novel_judge.png" id="4_24pi7"]
+[ext_resource type="Texture2D" uid="uid://c7iyku8lxh5a8" path="res://assets/visualNovel/visual_novel_crab.png" id="5_hmwjy"]
+[ext_resource type="Texture2D" uid="uid://c1t85tsrwexfv" path="res://assets/visualNovel/visual_novel_1.png" id="5_oflt1"]
+[ext_resource type="Texture2D" uid="uid://cusjgp2e88hmo" path="res://assets/visualNovel/visual_novel_2.png" id="6_hmwjy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -99,9 +103,117 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
+[sub_resource type="AtlasTexture" id="AtlasTexture_copvw"]
+atlas = ExtResource("4_24pi7")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p550v"]
+atlas = ExtResource("4_24pi7")
+region = Rect2(800, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v68q6"]
+atlas = ExtResource("4_24pi7")
+region = Rect2(1600, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qllvh"]
+atlas = ExtResource("5_hmwjy")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_andh7"]
+atlas = ExtResource("5_hmwjy")
+region = Rect2(800, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6stn"]
+atlas = ExtResource("5_hmwjy")
+region = Rect2(1600, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nvsv"]
+atlas = ExtResource("5_oflt1")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5moy"]
+atlas = ExtResource("5_oflt1")
+region = Rect2(800, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cyhp"]
+atlas = ExtResource("5_oflt1")
+region = Rect2(1600, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3x0t"]
+atlas = ExtResource("6_hmwjy")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egyjb"]
+atlas = ExtResource("6_hmwjy")
+region = Rect2(800, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puduu"]
+atlas = ExtResource("6_hmwjy")
+region = Rect2(1600, 0, 800, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r2vjg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_copvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p550v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v68q6")
+}],
+"loop": 1,
+"name": &"Judge",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qllvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_andh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6stn")
+}],
+"loop": 1,
+"name": &"Lawyer",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nvsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5moy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cyhp")
+}],
+"loop": 1,
+"name": &"Player",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3x0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egyjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puduu")
+}],
+"loop": 1,
+"name": &"Player_Sad",
+"speed": 1.0
+}]
+
+[node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376 node_paths=PackedStringArray("animatedSprite")]
 layer = 100
 script = ExtResource("1_tpkri")
+animatedSprite = NodePath("Balloon/AnimatedSprite2D")
 
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
@@ -191,6 +303,12 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
 text = "Response example"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Balloon" unique_id=2044624341]
+position = Vector2(1484, 417)
+sprite_frames = SubResource("SpriteFrames_r2vjg")
+animation = &"Lawyer"
+frame_progress = 0.29157972
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true

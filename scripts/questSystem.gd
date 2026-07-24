@@ -13,7 +13,7 @@ func addQuest(quest : QuestInfo) -> void:
 func _process(delta: float) -> void:
 	for questInfo in current_quests:
 		var quest = current_quests[questInfo]
-		if questInfo.type == QUESTTYPE.Distance:
+		if questInfo.type == QUESTTYPE.Distance and is_instance_valid(player):
 			var progress = remap(abs(questInfo.targetX - player.getCharacterPosition().x), abs(questInfo.targetX - playerInitialPosition), 100, 0, 100)
 			quest.updateResult(progress)
 
@@ -34,6 +34,6 @@ func Enter(resource: QuestInfo) -> QuestUI:
 	quest.setText(resource.text)
 	quest.setDescritiption(resource.description)
 	quest.setRequirement(resource.requirement)
-	if resource.type == QUESTTYPE.Distance:
+	if resource.type == QUESTTYPE.Distance and is_instance_valid(player):
 		playerInitialPosition = player.getCharacterPosition().x
 	return quest

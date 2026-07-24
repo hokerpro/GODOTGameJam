@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://q7860pe25kk4"]
 
 [ext_resource type="Script" uid="uid://d2dapl05rqtxq" path="res://scripts/gamemanager.gd" id="1_jk8j4"]
+[ext_resource type="Texture2D" uid="uid://52ps48wcbe37" path="res://assets/visualNovel/4f9fa6dc038a4bfe.png" id="2_jk8j4"]
 
 [node name="Court" type="Node2D" unique_id=1826877627]
 script = ExtResource("1_jk8j4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1782494595]
+
+[node name="4f9Fa6Dc038a4Bfe" type="Sprite2D" parent="." unique_id=1308702694]
+position = Vector2(960, 480)
+texture = ExtResource("2_jk8j4")

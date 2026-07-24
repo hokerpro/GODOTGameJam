@@ -1,6 +1,7 @@
 extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
+@export var animatedSprite : AnimatedSprite2D
 
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
@@ -142,7 +143,15 @@ func apply_dialogue_line() -> void:
 	# Show our balloon
 	balloon.show()
 	will_hide_balloon = false
-
+	
+	if dialogue_line.has_tag("image"):
+		var imageName = dialogue_line.get_tag_value("image")
+		animatedSprite.play(imageName)
+		animatedSprite.visible = true
+	else:
+		animatedSprite.stop()
+		animatedSprite.visible = false
+	
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
 		dialogue_label.type_out()

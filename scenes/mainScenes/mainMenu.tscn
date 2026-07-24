@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dkqhas0o27jh4"]
 
+[ext_resource type="PackedScene" uid="uid://clto42qmtsch5" path="res://ui/buttons/button.tscn" id="1_wr6rr"]
+
 [node name="Control" type="Control" unique_id=1360987667]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Button" parent="." unique_id=272128026 instance=ExtResource("1_wr6rr")]
+layout_mode = 1
