@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d10l0df77ly7b"]
 
 [ext_resource type="Script" uid="uid://chgprqvay76e3" path="res://scripts/transition.gd" id="1_e0bkc"]
+[ext_resource type="FontFile" uid="uid://jytxumb6p0ke" path="res://font/GermaniaOne-Regular.ttf" id="2_0vbk2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2vjg"]
 bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
@@ -27,3 +28,16 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r2vjg")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1496694397]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1020.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0vbk2")
+theme_override_font_sizes/font_size = 128
+horizontal_alignment = 1
+vertical_alignment = 1

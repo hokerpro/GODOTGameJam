@@ -33,7 +33,7 @@ func step1() -> void:
 	DialogueManager.show_dialogue_balloon(COURT, "", [])
 
 func step2() -> void:
-	TransitionSystem.changeScene("res://scenes/mainScenes/prison.tscn")
+	TransitionSystem.changeScene("res://scenes/mainScenes/prison.tscn", "10 Days Until The Execution")
 	await TransitionSystem.transition
 	QuestSystem.hideQuestUI(false)
 	QuestSystem.addQuest(QUEST_2)

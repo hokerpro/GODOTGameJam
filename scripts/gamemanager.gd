@@ -33,7 +33,6 @@ func _physics_process(delta: float) -> void:
 		if player == null or seahorseAnim == null:
 			return
 		if seahorseAnim.is_playing():
-			print("ADSDASDDSA")
 			player.setCameraOffset(Vector2(0, 150))
 			return
 		if pet.onScreen and player.playerState == "idle":
