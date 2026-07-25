@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cpgpco2cw5nil"
+path="res://.godot/imported/pufferfish.dialogue-5a64244a01862c9f5f3409b8118dde70.tres"
+
+[deps]
+
+source_file="res://dialogues/pufferfish.dialogue"
+dest_files=["res://.godot/imported/pufferfish.dialogue-5a64244a01862c9f5f3409b8118dde70.tres"]
+
+[params]
+
+defaults=true

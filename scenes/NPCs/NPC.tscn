@@ -157,6 +157,7 @@ animations = [{
 [node name="Npc" type="Node2D" unique_id=137344267]
 script = ExtResource("1_6xvi5")
 interactData = ExtResource("2_ktgr7")
+tipMessage = "Press E to start dialogue"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1042727104]
 position = Vector2(3, -33)
@@ -165,6 +166,7 @@ animation = &"npc_idle"
 autoplay = "npc_idle"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1335333753]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=87213274]
 position = Vector2(0, -10)

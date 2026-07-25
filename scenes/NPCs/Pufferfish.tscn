@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://lsdf11nn0jhg"]
+
+[ext_resource type="Script" uid="uid://hrdpwvn8iv8q" path="res://scripts/npc.gd" id="1_5w4vf"]
+[ext_resource type="Resource" uid="uid://d2kbkwanvqdgj" path="res://resources/dialogues/PufferFish.tres" id="2_5w4vf"]
+[ext_resource type="Texture2D" uid="uid://bop0t8dp7on01" path="res://assets/npcs/pufferfish.png" id="3_5w4vf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1m7e"]
+atlas = ExtResource("3_5w4vf")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gjgw"]
+atlas = ExtResource("3_5w4vf")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_daaot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1m7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gjgw")
+}],
+"loop": 1,
+"name": &"npc_idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ekc0"]
+
+[node name="Npc" type="Node2D" unique_id=137344267]
+script = ExtResource("1_5w4vf")
+interactData = ExtResource("2_5w4vf")
+tipMessage = "Press E to start dialogue"
+autoactivation = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1042727104]
+position = Vector2(0, -100)
+sprite_frames = SubResource("SpriteFrames_daaot")
+animation = &"npc_idle"
+autoplay = "npc_idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1335333753]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=87213274]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_1ekc0")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=866629061]
+unique_name_in_owner = true
+position = Vector2(128, -55)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c7iyku8lxh5a8" path="res://assets/visualNovel/visual_novel_crab.png" id="5_hmwjy"]
 [ext_resource type="Texture2D" uid="uid://c1t85tsrwexfv" path="res://assets/visualNovel/visual_novel_1.png" id="5_oflt1"]
 [ext_resource type="Texture2D" uid="uid://cusjgp2e88hmo" path="res://assets/visualNovel/visual_novel_2.png" id="6_hmwjy"]
+[ext_resource type="Texture2D" uid="uid://clffdrn0t138b" path="res://assets/visualNovel/pufffishb_novel_.png" id="8_hmwjy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -151,6 +152,18 @@ region = Rect2(800, 0, 800, 800)
 atlas = ExtResource("6_hmwjy")
 region = Rect2(1600, 0, 800, 800)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r4vi"]
+atlas = ExtResource("8_hmwjy")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0mqc"]
+atlas = ExtResource("8_hmwjy")
+region = Rect2(800, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57yow"]
+atlas = ExtResource("8_hmwjy")
+region = Rect2(1600, 0, 800, 800)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_r2vjg"]
 animations = [{
 "frames": [{
@@ -207,6 +220,20 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Player_Sad",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r4vi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0mqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57yow")
+}],
+"loop": 1,
+"name": &"Pufferfish",
 "speed": 3.0
 }]
 
@@ -265,7 +292,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
-seconds_per_step = 0.06
+seconds_per_step = 0.05
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
 custom_minimum_size = Vector2(20, 10)
@@ -307,7 +334,7 @@ text = "Response example"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Balloon" unique_id=2044624341]
 position = Vector2(1484, 417)
 sprite_frames = SubResource("SpriteFrames_r2vjg")
-animation = &"Judge"
+animation = &"Pufferfish"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true

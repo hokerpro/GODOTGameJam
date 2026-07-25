@@ -108,10 +108,13 @@ animations = [{
 script = ExtResource("1_8wqpi")
 interactData = ExtResource("2_hmkkh")
 areaSize = Vector2(100, 100)
+tipMessage = "Press E to PET THIS CUTIE!"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=754987300]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1099935433]
-light_mask = 2
 position = Vector2(-1, -29)
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1677602721]
 shape = SubResource("RectangleShape2D_mhefn")
@@ -126,5 +129,7 @@ autoplay = "pet_idle"
 unique_name_in_owner = true
 position = Vector2(-94, 0)
 
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

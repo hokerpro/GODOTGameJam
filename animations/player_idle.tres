@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bnq2smseg8ao2" path="res://assets/player/guy_idle.png" id="1_ct11l"]
 [ext_resource type="Texture2D" uid="uid://bruwp6xhlb86i" path="res://assets/player/guy_walk_digital.png" id="2_4rfmg"]
 [ext_resource type="Texture2D" uid="uid://63lsxwht8pb8" path="res://assets/player/Patpat.png" id="3_ta5kw"]
+[ext_resource type="Texture2D" uid="uid://cxgsxmp4oq7ko" path="res://assets/player/guy_idle_prison.png" id="4_un55p"]
+[ext_resource type="Texture2D" uid="uid://bichkpdyh32lg" path="res://assets/player/guy_walk_prison.png" id="5_6aefk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7ga4"]
 atlas = ExtResource("3_ta5kw")
@@ -75,6 +77,42 @@ region = Rect2(800, 0, 200, 200)
 [sub_resource type="AtlasTexture" id="AtlasTexture_u30go"]
 atlas = ExtResource("3_ta5kw")
 region = Rect2(1000, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nldsl"]
+atlas = ExtResource("4_un55p")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq8bb"]
+atlas = ExtResource("4_un55p")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rye4g"]
+atlas = ExtResource("4_un55p")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5glp"]
+atlas = ExtResource("4_un55p")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pw31m"]
+atlas = ExtResource("4_un55p")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agwwd"]
+atlas = ExtResource("5_6aefk")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t38s3"]
+atlas = ExtResource("5_6aefk")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m32i8"]
+atlas = ExtResource("5_6aefk")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpdet"]
+atlas = ExtResource("5_6aefk")
+region = Rect2(600, 0, 200, 200)
 
 [resource]
 animations = [{
@@ -155,5 +193,42 @@ animations = [{
 }],
 "loop": 0,
 "name": &"player_sit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nldsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq8bb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rye4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5glp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pw31m")
+}],
+"loop": 1,
+"name": &"prison_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agwwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t38s3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m32i8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpdet")
+}],
+"loop": 1,
+"name": &"prison_move",
 "speed": 5.0
 }]

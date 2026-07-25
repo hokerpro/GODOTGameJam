@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://bwific6mt65fr" path="res://ui/quests/quest_table.gd" id="1_whb1b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2vjg"]
-bg_color = Color(0.4462527, 0.2467143, 0.036952384, 1)
+bg_color = Color(0.16470589, 0.18039216, 0.22352941, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.843856, 0.48343235, 0.24970081, 1)
+border_color = Color(0.30588236, 0.33333334, 0.4, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -20,9 +20,11 @@ font = ExtResource("1_pqaww")
 font_size = 70
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_r2vjg"]
-color = Color(0.843856, 0.48343235, 0.24970081, 1)
+color = Color(0.30588236, 0.33333334, 0.4, 1)
+thickness = 2
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1741684830]
+visible = false
 script = ExtResource("1_whb1b")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=529753276]
@@ -51,7 +53,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=938175975]
 layout_mode = 2
-text = "QUESTS"
+text = "TASKS"
 label_settings = SubResource("LabelSettings_r2vjg")
 horizontal_alignment = 1
 

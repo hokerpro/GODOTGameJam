@@ -8,10 +8,11 @@ const SPEED = 300.0
 @onready var animationSprite : AnimatedSprite2D = character.get_node("AnimatedSprite2D")
 
 func transitionToInteract(resource : DialogueResource):
-	animationSprite.animation = "player_idle"
+	player.setPlayerMovementAnimation("idle")
 	Transitioned.emit("playerInteract")
 
 func Enter() -> void:
+	player.playerState = "idle"
 	if not DialogueManager.dialogue_started.is_connected(transitionToInteract):
 		DialogueManager.dialogue_started.connect(transitionToInteract, CONNECT_ONE_SHOT)
 
@@ -21,9 +22,9 @@ func updateAnimation() -> void:
 			player.flipSprite(false)
 		elif character.velocity.x < 0.25:
 			player.flipSprite(true)
-		player.changePlayerAnimation("player_move")
+		player.setPlayerMovementAnimation("move")
 	else:
-		player.changePlayerAnimation("player_idle")
+		player.setPlayerMovementAnimation("idle")
 
 func Update(delta: float) -> void:
 	updateAnimation()
@@ -38,3 +39,4 @@ func Physics_Update(delta: float) -> void:
 	else:
 		character.velocity = character.velocity.move_toward(Vector2.ZERO, SPEED * 0.2)
 	character.move_and_slide()
+	player.setCameraPositionBetweenPlayerAndVector()

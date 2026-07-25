@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cmyhe46m8i8f0"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_r2vjg"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r2vjg"]
+a = Vector2(-72, -75)
+b = Vector2(-72, 75)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_v63lh"]
+a = Vector2(-161, -90)
+b = Vector2(36, -90)
+
+[node name="Hoop" type="Node2D" unique_id=78794669]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1413812714]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=871520158]
+scale = Vector2(200, 150)
+texture = SubResource("PlaceholderTexture2D_r2vjg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1363369610]
+position = Vector2(170, 0)
+shape = SubResource("SegmentShape2D_r2vjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1502218036]
+position = Vector2(-26, 1)
+shape = SubResource("SegmentShape2D_r2vjg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=962650350]
+position = Vector2(62, 16)
+shape = SubResource("SegmentShape2D_v63lh")

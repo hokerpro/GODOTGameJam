@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b3selpd0jsg5b"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_daaot"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2vjg"]
+radius = 0.3335999
+
+[node name="Ball" type="Node2D" unique_id=1353398847]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=821436852]
+gravity_scale = -1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=2007081154]
+modulate = Color(0.71762717, 0, 0.19790426, 1)
+scale = Vector2(100, 100)
+texture = SubResource("PlaceholderTexture2D_daaot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1509441430]
+scale = Vector2(150, 150)
+shape = SubResource("CircleShape2D_r2vjg")

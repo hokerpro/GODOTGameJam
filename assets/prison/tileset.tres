@@ -1,0 +1,75 @@
+[gd_resource type="TileSet" format=3 uid="uid://dcec1c3rb8lqm"]
+
+[ext_resource type="Texture2D" uid="uid://clh5k7xqkk5gl" path="res://assets/prison/tilemap_test_prison.png" id="1_tpwka"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_seo7q"]
+texture = ExtResource("1_tpwka")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/z_index = -100
+0:0/0/y_sort_origin = 60
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -10, -64, -64, 64, -64, 64, -9)
+1:0/0 = 0
+1:0/0/z_index = -100
+1:0/0/y_sort_origin = 60
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 64, -64, 41, 64, 43, 64, 64)
+2:0/0 = 0
+2:0/0/z_index = -100
+2:0/0/y_sort_origin = 60
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(41, -64, 64, -64, 64, 64, 43, 64)
+3:0/0 = 0
+3:0/0/z_index = -100
+3:0/0/y_sort_origin = 60
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -41, -64, -41, 64, -64, 64)
+5:0/0 = 0
+5:0/0/z_index = -100
+5:0/0/y_sort_origin = 60
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, -64, 39, -64, 38, 37, -64, 36, -64, 64, 64, 64)
+6:0/0 = 0
+6:0/0/z_index = -100
+6:0/0/y_sort_origin = 60
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, -64, 39, -64, 42, 41, -41, 35, -43, -64, -64, -64, -64, 64, 64, 64)
+7:0/0 = 0
+7:0/0/texture_origin = Vector2i(-1, -1)
+7:0/0/z_index = -100
+7:0/0/y_sort_origin = 60
+8:0/0 = 0
+8:0/0/texture_origin = Vector2i(1, -1)
+8:0/0/z_index = -100
+8:0/0/y_sort_origin = 60
+9:0/0 = 0
+9:0/0/z_index = -100
+9:0/0/y_sort_origin = 60
+10:0/0 = 0
+10:0/0/z_index = -100
+10:0/0/y_sort_origin = 60
+11:0/0 = 0
+11:0/0/z_index = -100
+11:0/0/y_sort_origin = 60
+12:0/0 = 0
+12:0/0/z_index = -100
+12:0/0/y_sort_origin = 60
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, -18, 64, -64, -64, -64, -64, -19)
+13:0/0 = 0
+13:0/0/z_index = -100
+13:0/0/y_sort_origin = 60
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 64, 64, 64, 64, 39, -64, 39)
+14:0/0 = 0
+14:0/0/z_index = -100
+14:0/0/y_sort_origin = 60
+15:0/0 = 0
+15:0/0/z_index = -100
+15:0/0/y_sort_origin = 60
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, 64, -64, 39, -64, 39, 64)
+16:0/0 = 0
+16:0/0/y_sort_origin = 60
+16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -3, 64, -2, 64, 2, -64, 5)
+4:0/0 = 0
+4:0/0/z_index = -100
+4:0/0/y_sort_origin = 60
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -39, -64, -38, 37, 64, 36, 64, 64, -64, 64)
+
+[resource]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_seo7q")

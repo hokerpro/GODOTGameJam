@@ -6,7 +6,7 @@ var isTransitioning := false
 
 func changeScene(newScene : String) -> void:
 	isTransitioning = true
-	SceneTransition.beginTransition(2)
+	SceneTransition.beginTransition(1)
 	await SceneTransition.transition
 	get_tree().change_scene_to_file(newScene)
 	transition.emit()

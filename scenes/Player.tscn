@@ -7,35 +7,36 @@
 [ext_resource type="Script" uid="uid://csr3lqrks0nwa" path="res://states/player/playerInteract.gd" id="6_70d11"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r2vjg"]
-radius = 23.0
-height = 114.0
+radius = 17.0
+height = 64.0
 
 [node name="Player" type="Node2D" unique_id=621549556]
+y_sort_enabled = true
 script = ExtResource("1_3li8b")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1048969719]
+collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1050754951]
 zoom = Vector2(1.5, 1.5)
-limit_top = -100
-limit_bottom = 100
 position_smoothing_enabled = true
-position_smoothing_speed = 8.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_left_margin = 0.0
+drag_left_margin = 0.1
+drag_top_margin = 0.01
+drag_right_margin = 0.1
+drag_bottom_margin = 0.01
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=658133791]
-position = Vector2(-1, -91)
+position = Vector2(3, -82)
 sprite_frames = ExtResource("2_qu4a1")
-animation = &"player_idle"
+animation = &"prison_move"
 autoplay = "player_idle"
-frame_progress = 0.5177632
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=775065374]
 visible = false
 visibility_layer = 2
-position = Vector2(-4, -54)
+position = Vector2(0, -44)
 shape = SubResource("CapsuleShape2D_r2vjg")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1871768259 node_paths=PackedStringArray("initial_state")]

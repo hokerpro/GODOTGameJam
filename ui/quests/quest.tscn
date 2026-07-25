@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://jytxumb6p0ke" path="res://font/GermaniaOne-Regular.ttf" id="1_u3yse"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_daaot"]
-bg_color = Color(0.31456745, 0.1850842, 0.0597046, 1)
+bg_color = Color(0.30588236, 0.33333334, 0.4, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8

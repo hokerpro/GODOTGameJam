@@ -1,8 +1,9 @@
 ~ start
-Judge: Bla bla bla [#image=Judge]
+Prosecutor: Your Honor, this OCTOPUS killed it! He CRUELLY MURDERED it in broad daylight!  [#image=Lawyer]
+Judge: Dang, that sucks [#image=Judge]
 Lawyer: HE KILLED IT!! HE KILLED MY BOY! [#image=Lawyer]
-Judge: Oh, that sucks [#image=Judge]
+Judge: Enough. I've heard enough. He is the monster. [#image=Judge]
 Player: but, but... I didn't d... [#image=Player, #flip]
-Judge: SHUT UP, I DONT WANT TO HEAR YOU YAPPING, GUILTY!! I SENTENCE YOU TO BE EXECUTED ASAP!!! [#image=Judge] 
+Judge: SHUT UP, I DONT WANT TO HEAR YOU YAPPING, YOU ARE GUILTY!! I SENTENCE YOU TO THE DEATH PENALTY IN 10 DAYS!!! [#image=Judge] 
 $> StorySystem.startNextStep()
 => END

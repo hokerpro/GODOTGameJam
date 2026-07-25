@@ -28,12 +28,13 @@ func clearQuest(questInfo : QuestInfo) -> void:
 	quest.queue_free()
 	current_quests.erase(questInfo)
 
+func hideQuestUI(hide: bool = true) -> void:
+	UiQuestTable.visible = not hide
+
 func Enter(resource: QuestInfo) -> QuestUI:
 	var quest : QuestUI = QUEST.instantiate()
 	UiQuestTable.addChild(quest)
 	quest.setText(resource.text)
 	quest.setDescritiption(resource.description)
 	quest.setRequirement(resource.requirement)
-	if resource.type == QUESTTYPE.Distance and is_instance_valid(player):
-		playerInitialPosition = player.getCharacterPosition().x
 	return quest
